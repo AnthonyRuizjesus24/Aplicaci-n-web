@@ -1,16 +1,59 @@
 ---
+// Puedes importar componentes si los tienes
+import Header from '../component/Header.astro';
+import Footer from '../component/Footer.astro';
+import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
 
+const pageTitle = "Inicio";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="hero">
+        <h1>Descubre el Mundo con Nosotros</h1>
+        <p>Encuentra el paquete de viaje perfecto para tus próximas vacaciones.</p>
+        <a href="/packages" class="cta-button">Explora Paquetes</a>
+      </section>
+
+	  <section class="featured-packages">
+		<h2>Paquetes Destacados</h2>
+		<div class="packages">
+		  <div class="package">
+			<img src="/path/to/image.jpg" alt="Paquete Aventura" />
+			<h3>Paquete Aventura</h3>
+			<p>Explora lo desconocido con nuestra oferta de aventura.</p>
+			<a href="/packages/adventure" class="btn-more">Más Información</a>
+		  </div>
+		  <!-- Más paquetes aquí -->
+		</div>
+	  </section>
+
+      <section class="gallery">
+        <h2>Galería de Destinos</h2>
+        <div class="gallery-images">
+          <img src="/path/to/destination1.jpg" alt="Destino 1" />
+          <img src="/path/to/destination2.jpg" alt="Destino 2" />
+          <!-- Más imágenes aquí -->
+        </div>
+      </section>
+    </main>
+    <Footer />
+	<script>
+		function toggleMenu() {
+		  const navLinks = document.querySelector('.nav-links');
+		  navLinks.classList.toggle('expanded');
+		}
+	
+		document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+	  </script>
+  </body>
 </html>

@@ -1,0 +1,24 @@
+---
+import Header from '../component/Header.astro';
+import Footer from '../component/Footer.astro';
+
+const pageTitle = "Destinos";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>{pageTitle}</h1>
+      <section class="featured-destinations">
+        <!-- Contenido de destinos -->
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
