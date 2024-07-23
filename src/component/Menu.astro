@@ -1,0 +1,95 @@
+---
+// Menu.astro
+---
+<style>
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .logo img {
+      max-height: 50px;
+      width: auto;
+      display: block;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+  
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+  
+    .hamburger-menu .bar {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+    }
+  
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+  
+      .nav-links.expanded {
+        display: flex;
+      }
+  
+      .hamburger-menu {
+        display: flex;
+      }
+    }
+  </style>
+  
+  <div class="header-content">
+    <a href="/" class="logo"><img src="/logo.jpg" alt="Logo"></a>
+    <nav class="nav-links">
+        <a href="/">HOME</a>
+        <a href="/destinations">DESTINOS</a>
+        <a href="/packages">PAQUETES</a>
+        <a href="/offers">OFERTAS</a>
+        <a href="/about">SOBRE NOSOTROS</a>
+        <a href="/contact">CONTACTO</a>
+      </nav>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('expanded');
+    }
+
+    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+  </script>
+  

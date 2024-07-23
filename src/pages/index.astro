@@ -40,20 +40,27 @@ const pageTitle = "Inicio";
       <section class="gallery">
         <h2>Galería de Destinos</h2>
         <div class="gallery-images">
-          <img src="/path/to/destination1.jpg" alt="Destino 1" />
+          <img src="/galeria.jpg" alt="Destino 1" />
           <img src="/path/to/destination2.jpg" alt="Destino 2" />
+          <img src="/path/to/destination2.jpg" alt="Destino 2" />
+          <img src="/path/to/destination2.jpg" alt="Destino 2" />
+          <img src="/path/to/destination2.jpg" alt="Destino 2" />
+          <a href="/galeria-de-destinos" class="boton-galeria">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L22 12L2 22V16L15 12L2 8V2Z" fill="#fff"/>
+            </svg>
+            Ver Más
+          </a>
           <!-- Más imágenes aquí -->
         </div>
       </section>
+
+      <section class="contact-whatsapp">
+        <a href="https://wa.me/51921993576?text=Hola%20quiero%20más%20información%20sobre%20los%20paquetes" class="whatsapp-button" target="_blank">
+          Envíanos un mensaje por WhatsApp
+        </a>
+      </section>
     </main>
     <Footer />
-	<script>
-		function toggleMenu() {
-		  const navLinks = document.querySelector('.nav-links');
-		  navLinks.classList.toggle('expanded');
-		}
-	
-		document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
-	  </script>
   </body>
 </html>

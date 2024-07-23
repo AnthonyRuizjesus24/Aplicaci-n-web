@@ -1,120 +1,55 @@
 body {
-    background-image: url('/fondo.jpg'); /* Ruta de tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo img {
-    max-height: 50px; /* Ajusta la altura máxima según tu diseño */
-    width: auto;
-    display: block;
-  }
-  /* Estilos de los enlaces de navegación */
-.nav-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-  }
-  .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .hamburger-menu {
-    display: none;
-  }
-  .hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 3px 0;
-  }
-  
-  
-  .hero {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .cta-button {
-    background-color: #ff6600;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .packages, .gallery {
-    padding: 2rem;
-  }
-  
-  .gallery-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  
-  .footer {
-    background: rgba(0, 0, 0, 0.8);
-    color: #0e0d0d;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* Media queries para diseño responsivo */
-  @media (max-width: 600px) {
-    .nav-links {
-        display: none; /* Oculta los enlaces de navegación en dispositivos móviles */
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px; /* Ajusta según la altura del encabezado */
-        left: 0;
-        padding: 1rem;
-        box-sizing: border-box;
-      }    
-    
-    .hamburger-menu {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    
-    .bar {
-      width: 25px;
-      height: 3px;
-      background: #fff;
-      margin: 3px 0;
-    }
-  }
-  .nav-links.expanded {
-    display: flex; /* Muestra los enlaces cuando el menú está expandido */
-  }
+  background-image: url('/fondo.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px; /* Ajusta la altura máxima según tu diseño */
+  width: auto;
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #0e0d0d;
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Estilos generales para la sección de paquetes destacados */
 .featured-packages {
   padding: 1rem; /* Reducir el padding para hacer el contenedor más compacto */
@@ -188,21 +123,130 @@ body {
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .package {
-    width: 100%; /* Tarjetas ocupan el 100% del ancho en pantallas pequeñas */
-    max-width: 350px; /* Ancho máximo para mantener las tarjetas de tamaño adecuado */
+      width: 100%; /* Tarjetas ocupan el 100% del ancho en pantallas pequeñas */
+      max-width: 350px; /* Ancho máximo para mantener las tarjetas de tamaño adecuado */
   }
 }
 
 @media (max-width: 480px) {
   .featured-packages h2 {
-    font-size: 1.75rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
+      font-size: 1.75rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
   }
 
   .btn-more {
-    font-size: 0.75rem; /* Reducir el tamaño del texto del botón en pantallas pequeñas */
+      font-size: 0.75rem; /* Reducir el tamaño del texto del botón en pantallas pequeñas */
   }
 }
-/*galerry*/
+/*galeria de destinos */
+/* Estilos generales para la galería */
+.gallery {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  color: #fff;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 700px; /* Ancho máximo para la galería */
+}
 
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #ff6600; /* Color del texto */
+  letter-spacing: 2px;
+}
 
-  
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Disposición en cuadrícula */
+  gap: 1rem; /* Espacio entre imágenes */
+}
+
+.gallery-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  border: 4px solid #ff6600; /* Borde con color */
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05); /* Escala al pasar el ratón por encima */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .gallery h2 {
+      font-size: 1.5rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+      padding: 1rem;
+  }
+
+  .gallery h2 {
+      font-size: 1.25rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
+  }
+
+  .gallery-images {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar la disposición en cuadrícula */
+  }
+}
+
+.boton-galeria {
+  display: block; /* Cambiado a block para que el botón ocupe toda la línea */
+  width: 90px; /* Ajusta el ancho según tu preferencia */
+  padding: 8px 16px; /* Ajusta el padding para hacer el botón más pequeño */
+  margin: 20px auto; /* Centra el botón y le da margen superior e inferior */
+  background-color: #e95959; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para color y transformación */
+  height: 30%;
+}
+
+.boton-galeria i {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  transition: transform 0.3s ease; /* Transición para la animación del ícono */
+}
+
+.boton-galeria:hover {
+  background-color: #615b5b; /* Color de fondo al pasar el ratón */
+}
+
+.boton-galeria:active {
+  transform: scale(0.95); /* Efecto de escala al presionar */
+}
+
+.boton-galeria:active i {
+  transform: translateY(-10px) rotate(45deg); /* Mueve el ícono hacia arriba y lo rota */
+}
+/*whatsapp*/
+.contact-whatsapp {
+  text-align: center; /* Centra el botón en la página */
+  margin: 20px 0; /* Espacio alrededor del botón */
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  color: #fff; /* Color del texto */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Color de fondo al pasar el ratón */
+}
