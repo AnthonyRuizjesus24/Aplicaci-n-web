@@ -1,0 +1,369 @@
+/* Estilos generales para la sección de paquetes destacados */
+.featured-packages {
+    padding: 1rem; /* Reducir el padding para hacer el contenedor más compacto */
+    background-image: url('muralla-china.jpg'); /* Color de fondo claro para contraste */
+    text-align: center;
+    max-width: 1340px; /* Establecer un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem; /* Tamaño del botón */
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .featured-packages h2 {
+    font-size: 2rem; /* Tamaño de fuente ajustado */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Hacer el título más prominente */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  }
+  
+  .packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Reducir el espacio entre tarjetas */
+  }
+  .package:hover {
+    transform: translateY(-5px);
+  }
+  .package {
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+    overflow: hidden;
+    width: 250px; /* Reducir el ancho de las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+    cursor: pointer;
+  }
+  
+  .package img {
+    width: 100%;
+    height: 100px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    border-bottom: 4px solid #007bff; /* Borde inferior para separación visual */
+  }
+  
+  .package h3 {
+    font-size: 1.5rem; /* Tamaño de fuente ligeramente menor */
+    margin: 0.5rem 0;
+    color: #444; /* Color de texto para el título del paquete */
+  }
+  
+  .package p {
+    padding: 0 0.5rem; /* Reducir el padding */
+    color: #666; /* Color del texto del párrafo */
+    line-height: 1.4; /* Espaciado entre líneas para mejor legibilidad */
+  }
+  
+  .btn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Reducir el tamaño del botón */
+    margin: 0.75rem 0;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border-radius: 4px; /* Bordes más redondeados */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875rem; /* Tamaño de fuente del botón ajustado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    
+  }
+  
+  .btn-more:hover {
+    background-color: #0056b3; /* Color de fondo del botón en hover */
+    transform: scale(1.03); /* Efecto de escala más sutil */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .featured-packages h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featured-packages h2 {
+        font-size: 1.75rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
+    }
+  
+    .btn-more {
+        font-size: 0.75rem; /* Reducir el tamaño del texto del botón en pantallas pequeñas */
+    }
+  }
+  .package h3 {
+    font-size: 1.5rem;
+  }
+
+  .package p {
+    font-size: 0.875rem;
+  }
+
+  .btn-more {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  /*holaa*/
+  /* global.css */
+
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Introducción a los Paquetes */
+.intro-packages {
+  background: transparent;
+  padding: 2rem;
+  text-align: center;
+}
+
+.intro-packages h1 {
+  margin-top: 0;
+}
+
+.intro-packages p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Lista de Paquetes */
+.packages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.package-card {
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: scale(1.03);
+}
+
+.package-card img {
+  width: 100%;
+  height: auto;
+}
+
+.package-info {
+  padding: 1rem;
+}
+
+.package-info h3 {
+  margin-top: 0;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.btn-more:hover {
+  background: #0056b3;
+}
+
+/* Filtros de Paquete */
+.package-filters {
+  background: transparent;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.package-filters form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.package-filters label {
+  font-weight: bold;
+}
+
+.package-filters select, .package-filters input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.package-filters button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.package-filters button:hover {
+  background: #0056b3;
+}
+
+/* Ofertas Especiales */
+.special-offers {
+  padding: 2rem;
+  background: transparent;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.offer-card img {
+  width: 100%;
+  height: auto;
+}
+
+.offer-info {
+  padding: 1rem;
+}
+
+.offer-info h3 {
+  margin-top: 0;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.btn-more:hover {
+  background: #218838;
+}
+
+/* Testimonios y Reseñas */
+.testimonials {
+  background: #fff;
+  padding: 2rem;
+}
+
+.testimonial {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.testimonial:last-child {
+  border-bottom: none;
+}
+
+.testimonial p {
+  margin: 0;
+}
+
+.testimonial p:last-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Formulario de Consulta */
+.contact-form {
+  background:transparent;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .packages-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card {
+    max-width: 100%;
+  }
+
+  .package-filters form {
+    flex-direction: column;
+  }
+}

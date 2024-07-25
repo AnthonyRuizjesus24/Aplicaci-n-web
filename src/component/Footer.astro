@@ -1,4 +1,28 @@
-<footer>
-    <p>&copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos reservados.</p>
-  </footer>
+---
+import '../styles/footer.css'
+---
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Empresa</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que esta ruta es correcta -->
+</head>
+<body>
   
+  <!-- Contenido de tu página -->
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Max-Ruiz. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="https://es-la.facebook.com/" class="social-icon"><img src="/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/accounts/login/?next=%2F&source=desktop_nav&hl=es" class="social-icon"><img src="/instagran.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/es/" class="social-icon"><img src="/tiktok.svg" alt="Tiktok"></a>
+        <!-- Añade más enlaces de redes sociales según sea necesario -->
+      </div>
+    </div>
+  </footer>
+ 
+</body>
+</html>

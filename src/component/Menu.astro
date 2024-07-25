@@ -1,13 +1,53 @@
 ---
 // Menu.astro
+import UserAvatar from "./UserAvatar.astro";
+
+const links = [
+  { href: "/", text: "Home" },
+  { href: "/destinations", text: "Destinos" },
+  { href: "/packages", text: "Paquetes" },
+  { href: "/offers", text: "Ofertas" },
+  { href: "/about", text: "Sobre Nosotros" },
+  { href: "/contact", text: "Contacto" },
+];
+
+const pathname = new URL(Astro.request.url).pathname;
 ---
+
+<head>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<div class="header-content">
+  <a href="/" class="logo"><img src="/logo.webp" alt="Logo"></a>
+  <nav class="nav-links">
+    {links.map(link => (
+      <a href={link.href} class={pathname === link.href ? "active" : ""}>{link.text}</a>
+    ))}
+  </nav>
+  <UserAvatar />
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('expanded');
+  }
+
+  document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
+</script>
 <style>
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.8);
+      padding: 0.5rem;
+      background-color: transparent
     }
   
     .logo img {
@@ -23,6 +63,12 @@
   
     .nav-links a {
       color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    .nav-links a .activo {
+      color: #947cbe;
       text-decoration: none;
       margin: 0 1rem;
     }
@@ -67,29 +113,4 @@
     }
   </style>
   
-  <div class="header-content">
-    <a href="/" class="logo"><img src="/logo.jpg" alt="Logo"></a>
-    <nav class="nav-links">
-        <a href="/">HOME</a>
-        <a href="/destinations">DESTINOS</a>
-        <a href="/packages">PAQUETES</a>
-        <a href="/offers">OFERTAS</a>
-        <a href="/about">SOBRE NOSOTROS</a>
-        <a href="/contact">CONTACTO</a>
-      </nav>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-  </div>
-  
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('expanded');
-    }
-
-    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
-  </script>
   

@@ -1,0 +1,53 @@
+.footer {
+    background-color:transparent;
+    color: #000000;
+   
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+ 
+    
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem; /* Espacio entre los íconos */
+    margin-top: 1rem;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    width: 50px; /* Tamaño de los íconos */
+    height: 50px; /* Tamaño de los íconos */
+  }
+  
+  .social-icon img {
+    width: 100%; /* Asegura que la imagen ocupe todo el espacio del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe todo el espacio del contenedor */
+    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el cursor sobre él */
+    filter: brightness(0.8); /* Reduce el brillo al pasar el cursor sobre él */
+  }
+  
+  @media (max-width: 600px) {
+    .social-icon {
+      width: 24px; /* Tamaño reducido para pantallas más pequeñas */
+      height: 24px; /* Tamaño reducido para pantallas más pequeñas */
+    }
+  }
+  

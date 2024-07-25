@@ -1,24 +1,42 @@
 ---
+// Puedes importar componentes si los tienes
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
-
+import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
+import '../styles/ofertas.css'
 const pageTitle = "Ofertas";
 ---
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
-    <main>
-      <h1>{pageTitle}</h1>
-      <section class="special-offers">
-        <!-- Contenido de ofertas -->
-      </section>
-    </main>
+    <!-- Ofertas Especiales -->
+    <section class="special-offers">
+      <h2>Ofertas Especiales</h2>
+      <div class="offer-card">
+        <img src="/path/to/offer1.jpg" alt="Oferta 1" />
+        <div class="offer-info">
+          <h3>Paquete Playa del Carmen</h3>
+          <p>Disfruta de 7 noches en un resort todo incluido en Playa del Carmen. Incluye vuelos y traslados.</p>
+          <a href="/offers/playa-del-carmen" class="btn-more">Ver Oferta</a>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="/path/to/offer2.jpg" alt="Oferta 2" />
+        <div class="offer-info">
+          <h3>Aventura en el Gran Cañón</h3>
+          <p>Un paquete de 3 días para explorar el Gran Cañón con guías expertos y alojamiento incluido.</p>
+          <a href="/offers/gran-canon" class="btn-more">Ver Oferta</a>
+        </div>
+      </div>
+    </section>
     <Footer />
   </body>
 </html>

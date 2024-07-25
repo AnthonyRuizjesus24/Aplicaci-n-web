@@ -1,0 +1,21 @@
+/*whatsapp*/
+.contact-whatsapp {
+    text-align: center; /* Centra el botón en la página */
+    margin: 20px 0; /* Espacio alrededor del botón */
+  }
+  
+  .whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: #fff; /* Color del texto */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Color de fondo al pasar el ratón */
+  }

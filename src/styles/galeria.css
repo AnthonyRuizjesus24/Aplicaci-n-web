@@ -1,0 +1,92 @@
+/* Estilos generales para la galería */
+.gallery {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: #fff;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 1300px; /* Ancho máximo para la galería */
+    cursor: pointer;
+  }
+  
+  .gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #ff6600; /* Color del texto */
+    letter-spacing: 2px;
+  }
+  
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Disposición en cuadrícula */
+    gap: 1rem; /* Espacio entre imágenes */
+  }
+  
+  .gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    border: 4px solid #ff6600; /* Borde con color */
+  }
+  
+  .gallery-images img:hover {
+    transform: scale(1.05); /* Escala al pasar el ratón por encima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .gallery h2 {
+        font-size: 1.5rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+        padding: 1rem;
+    }
+  
+    .gallery h2 {
+        font-size: 1.25rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
+    }
+  
+    .gallery-images {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar la disposición en cuadrícula */
+    }
+  }
+  
+  .boton-galeria {
+    display: block; /* Cambiado a block para que el botón ocupe toda la línea */
+    width: 90px; /* Ajusta el ancho según tu preferencia */
+    padding: 8px 16px; /* Ajusta el padding para hacer el botón más pequeño */
+    margin: 20px auto; /* Centra el botón y le da margen superior e inferior */
+    background-color: #ff6600; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para color y transformación */
+    height: 30%;
+  }
+  
+  .boton-galeria i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    transition: transform 0.3s ease; /* Transición para la animación del ícono */
+  }
+  
+  .boton-galeria:hover {
+    background-color: #596cdb; /* Color de fondo al pasar el ratón */
+  }
+  
+  .boton-galeria:active {
+    transform: scale(0.95); /* Efecto de escala al presionar */
+  }
+  
+  .boton-galeria:active i {
+    transform: translateY(-10px) rotate(45deg); /* Mueve el ícono hacia arriba y lo rota */
+  }

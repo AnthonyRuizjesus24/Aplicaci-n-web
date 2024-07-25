@@ -3,7 +3,9 @@
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
 import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
-
+import Galeria from '../component/galeria-destino/Galeria.astro';
+import Paquetes from '../component/paquetes/Paquetes.astro';
+import Whatsapp from '../component/Whatsapp.astro';
 const pageTitle = "Inicio";
 ---
 
@@ -21,45 +23,11 @@ const pageTitle = "Inicio";
       <section class="hero">
         <h1>Descubre el Mundo con Nosotros</h1>
         <p>Encuentra el paquete de viaje perfecto para tus próximas vacaciones.</p>
-        <a href="/packages" class="cta-button">Explora Paquetes</a>
+        
       </section>
-
-	  <section class="featured-packages">
-		<h2>Paquetes Destacados</h2>
-		<div class="packages">
-		  <div class="package">
-			<img src="/path/to/image.jpg" alt="Paquete Aventura" />
-			<h3>Paquete Aventura</h3>
-			<p>Explora lo desconocido con nuestra oferta de aventura.</p>
-			<a href="/packages/adventure" class="btn-more">Más Información</a>
-		  </div>
-		  <!-- Más paquetes aquí -->
-		</div>
-	  </section>
-
-      <section class="gallery">
-        <h2>Galería de Destinos</h2>
-        <div class="gallery-images">
-          <img src="/galeria.jpg" alt="Destino 1" />
-          <img src="/path/to/destination2.jpg" alt="Destino 2" />
-          <img src="/path/to/destination2.jpg" alt="Destino 2" />
-          <img src="/path/to/destination2.jpg" alt="Destino 2" />
-          <img src="/path/to/destination2.jpg" alt="Destino 2" />
-          <a href="/galeria-de-destinos" class="boton-galeria">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L22 12L2 22V16L15 12L2 8V2Z" fill="#fff"/>
-            </svg>
-            Ver Más
-          </a>
-          <!-- Más imágenes aquí -->
-        </div>
-      </section>
-
-      <section class="contact-whatsapp">
-        <a href="https://wa.me/51921993576?text=Hola%20quiero%20más%20información%20sobre%20los%20paquetes" class="whatsapp-button" target="_blank">
-          Envíanos un mensaje por WhatsApp
-        </a>
-      </section>
+      <Paquetes/>
+      <Galeria/>
+      <Whatsapp/>
     </main>
     <Footer />
   </body>
