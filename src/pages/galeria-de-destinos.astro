@@ -1,10 +1,9 @@
 ---
-// Puedes importar componentes si los tienes
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
-import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
-
-const pageTitle = "Inicio";
+import '../styles/global.css';
+import '../styles/galeria-destino.css';
+const pageTitle = "Galería de Destinos";
 ---
 
 <html lang="es">
@@ -14,10 +13,51 @@ const pageTitle = "Inicio";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-  </head>
+ </head>
   <body>
     <Header />
+    <main>
+      <!-- Sección de Introducción -->
+      <section class="intro-gallery">
+        <h1>Descubre Nuestros Destinos</h1>
+        <p>Explora los lugares más hermosos y emocionantes que ofrecemos. Desde playas paradisíacas hasta montañas impresionantes, tenemos destinos para todos los gustos.</p>
+      </section>
 
+      <!-- Galería de Destinos -->
+      <section class="destinations-gallery">
+        <h2>Galería de Destinos Populares</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Playa del Carmen" />
+            <div class="gallery-item-info">
+              <h3>Playa del Carmen</h3>
+              <p>Un paraíso tropical con arenas blancas y aguas cristalinas.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/galeria-destinos/machu-picchu.jpg" alt="Machu Picchu" />
+            <div class="gallery-item-info">
+              <h3>Machu Picchu</h3>
+              <p>Explora la antigua ciudad inca en lo alto de los Andes.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/galeria-destinos/paris.jpg" alt="Paris" />
+            <div class="gallery-item-info">
+              <h3>Paris</h3>
+              <p>La ciudad del amor y las luces, perfecta para una escapada romántica.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/galeria-destinos/tokyo.jpg" alt="Tokyo" />
+            <div class="gallery-item-info">
+              <h3>Tokyo</h3>
+              <p>Una metrópolis vibrante con una mezcla única de tradición y modernidad.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <Footer />
   </body>
 </html>

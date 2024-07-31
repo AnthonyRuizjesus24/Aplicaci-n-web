@@ -1,0 +1,234 @@
+---
+const pageTitle = "Buscador de Destinos";
+const placeholderText = "Ingresa un país o lugar";
+---
+
+<section class="search-section">
+  <h2>{pageTitle}</h2>
+  <form id="search-form" class="search-form">
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder={placeholderText} 
+      aria-label="Buscar destino" 
+      class="search-input"
+    />
+    <button 
+      type="button" 
+      onclick="searchDestinations()" 
+      class="search-button"
+    >
+      Buscar
+    </button>
+    <div class="filter-container">
+      <label for="region" class="filter-label">Región:</label>
+      <select id="region" class="filter-select">
+        <option value="">Todas</option>
+        <option value="americas">Américas</option>
+        <option value="europe">Europa</option>
+        <option value="asia">Asia</option>
+        <option value="africa">África</option>
+        <option value="oceania">Oceanía</option>
+      </select>
+    </div>
+    <ul id="suggestions-list" class="suggestions-list"></ul>
+  </form>
+
+  <div id="advanced-search" class="advanced-search">
+  <button onclick="toggleAdvancedSearch()" class="toggle-advanced-btn">Buscar Avanzado</button>
+  <div id="advanced-options" class="advanced-options">
+    <div class="filter-group">
+      <label for="date-from">Desde:</label>
+      <input type="date" id="date-from" class="date-input" />
+    </div>
+    <div class="filter-group">
+      <label for="date-to">Hasta:</label>
+      <input type="date" id="date-to" class="date-input" />
+    </div>
+    <div class="filter-group">
+      <label for="price-range">Rango de Precio:</label>
+      <input type="text" id="price-range" placeholder="Ej. 500-1000" class="price-input" />
+    </div>
+  </div>
+</div>
+</section>
+
+<style>
+  .search-section {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .search-form {
+    position: relative;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+
+  .filter-container {
+    margin-top: 1rem;
+  }
+
+  .filter-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .filter-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .advanced-search {
+    margin-top: 1rem;
+  }
+
+  .toggle-advanced-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .toggle-advanced-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .advanced-options {
+    display: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .date-input, .price-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .suggestions-list li {
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .suggestions-list li:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+
+<script>
+    declare global {
+      interface Window {
+        selectSuggestion: (suggestion: string) => void;
+        toggleAdvancedSearch: () => void;
+      }
+    }
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input') as HTMLInputElement;
+      const suggestionsList = document.getElementById('suggestions-list')!;
+      const advancedOptions = document.getElementById('advanced-options')!;
+      
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim();
+        if (query) {
+          const suggestions = ['Perú', 'Argentina', 'Chile', 'Brasil', 'Colombia'].filter(item => item.toLowerCase().includes(query.toLowerCase()));
+          displaySuggestions(suggestions);
+        } else {
+          suggestionsList.innerHTML = '';
+        }
+      });
+  
+      function displaySuggestions(suggestions: string[]) {
+        suggestionsList.innerHTML = suggestions.map(suggestion => `
+          <li onclick="window.selectSuggestion('${suggestion}')">${suggestion}</li>
+        `).join('');
+      }
+  
+      window.selectSuggestion = function(suggestion: string) {
+        searchInput.value = suggestion;
+        suggestionsList.innerHTML = '';
+      };
+  
+      window.toggleAdvancedSearch = function() {
+        if (advancedOptions.style.display === 'none' || advancedOptions.style.display === '') {
+          advancedOptions.style.display = 'block';
+        } else {
+          advancedOptions.style.display = 'none';
+        }
+      };
+    });
+  
+    function searchDestinations() {
+      const query = (document.getElementById('search-input') as HTMLInputElement).value.trim();
+      if (query) {
+        alert(`Buscando destinos para: ${query}`);
+        // Aquí puedes implementar la lógica de búsqueda real
+      } else {
+        alert('Por favor, ingresa un país o lugar.');
+      }
+    }
+  </script>

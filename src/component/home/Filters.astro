@@ -1,0 +1,95 @@
+<section class="package-filters">
+  <h2>Filtra tu Paquete</h2>
+  <form action="/search" method="get">
+    <div class="filter-group">
+      <label for="type">Tipo:</label>
+      <select id="type" name="type">
+        <option value="">Selecciona</option>
+        <option value="adventure">Aventura</option>
+        <option value="beach">Playa</option>
+        <option value="romantic">Romántico</option>
+        <option value="cultural">Cultural</option>
+        <option value="nature">Naturaleza</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="duration">Duración:</label>
+      <select id="duration" name="duration">
+        <option value="">Selecciona</option>
+        <option value="3days">3 Días</option>
+        <option value="7days">7 Días</option>
+        <option value="14days">14 Días</option>
+        <option value="1month">1 Mes</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="price">Precio:</label>
+      <input type="text" id="price" name="price" placeholder="Ej. 500-1000" />
+    </div>
+
+    <div class="filter-group">
+      <label for="rating">Calificación:</label>
+      <select id="rating" name="rating">
+        <option value="">Selecciona</option>
+        <option value="1star">1 Estrella</option>
+        <option value="2stars">2 Estrellas</option>
+        <option value="3stars">3 Estrellas</option>
+        <option value="4stars">4 Estrellas</option>
+        <option value="5stars">5 Estrellas</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="departure">Fecha de Salida:</label>
+      <input type="date" id="departure" name="departure" />
+    </div>
+
+    <button type="submit" class="btn-filter">Buscar</button>
+  </form>
+</section>
+
+<style>
+  .package-filters {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+  }
+  .package-filters h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .filter-group {
+    margin-bottom: 15px;
+  }
+  .filter-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .filter-group select,
+  .filter-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .btn-filter {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-filter:hover {
+    background-color: #0056b3;
+  }
+</style>

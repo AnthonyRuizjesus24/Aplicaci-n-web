@@ -14,7 +14,7 @@
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
-    color: #ff6600; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     letter-spacing: 2px;
   }
   
@@ -30,7 +30,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-    border: 4px solid #ff6600; /* Borde con color */
+    border: 4px solid #ffffff; /* Borde con color */
   }
   
   .gallery-images img:hover {
@@ -71,7 +71,10 @@
     border-radius: 5px;
     font-size: 14px; /* Tamaño de fuente más pequeño */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para color y transformación */
-    height: 30%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    
   }
   
   .boton-galeria i {

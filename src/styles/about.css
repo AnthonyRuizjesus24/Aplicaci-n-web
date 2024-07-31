@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  h1, h2, h3 {
+    color: #444;
+  }
+  
+  .intro, .mission-vision, .values, .team, .history, .testimonials {
+    margin-bottom: 2rem;
+  }
+  
+  .mission-vision, .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .mission-vision > div, .team-member {
+    flex: 1 1 calc(50% - 2rem);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .values ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .values li {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .testimonials .testimonial {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .testimonials .testimonial p:last-child {
+    font-style: italic;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+  

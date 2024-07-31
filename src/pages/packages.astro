@@ -49,40 +49,35 @@ const pageTitle = "Paquetes";
       <section class="package-filters">
         <h2>Filtra tu Paquete</h2>
         <form action="/search" method="get">
-          <label for="type">Tipo:</label>
-          <select id="type" name="type">
-            <option value="adventure">Aventura</option>
-            <option value="beach">Playa</option>
-            <option value="romantic">Romántico</option>
-          </select>
-
-          <label for="duration">Duración:</label>
-          <select id="duration" name="duration">
-            <option value="3days">3 Días</option>
-            <option value="7days">7 Días</option>
-            <option value="14days">14 Días</option>
-          </select>
-
-          <label for="price">Precio:</label>
-          <input type="text" id="price" name="price" placeholder="Ej. 500-1000" />
-
+          <div class="form-group">
+            <label for="type">Tipo:</label>
+            <select id="type" name="type">
+              <option value="adventure">Aventura</option>
+              <option value="beach">Playa</option>
+              <option value="romantic">Romántico</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="duration">Duración:</label>
+            <select id="duration" name="duration">
+              <option value="3days">3 Días</option>
+              <option value="7days">7 Días</option>
+              <option value="14days">14 Días</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="text" id="price" name="price" placeholder="Ej. 500-1000" />
+          </div>
+      
           <button type="submit">Buscar</button>
         </form>
       </section>
+      
 
-      <!-- Ofertas Especiales -->
-      <section class="special-offers">
-        <h2>Ofertas Especiales</h2>
-        <div class="offer-card">
-          <img src="/path/to/offer1.jpg" alt="Oferta 1" />
-          <div class="offer-info">
-            <h3>Descuento en Paquete de Aventura</h3>
-            <p>Aprovecha un 20% de descuento en nuestros paquetes de aventura. ¡Reserva ahora!</p>
-            <a href="/offers/adventure" class="btn-more">Ver Oferta</a>
-          </div>
-        </div>
-      </section>
-
+      
       <!-- Testimonios y Reseñas -->
       <section class="testimonials">
         <h2>Lo Que Dicen Nuestros Clientes</h2>
@@ -116,3 +111,19 @@ const pageTitle = "Paquetes";
     <Footer />
   </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.package-filters form');
+  const priceInput = document.getElementById('price') as HTMLInputElement;
+
+  form.addEventListener('submit', (event) => {
+    const priceValue = priceInput.value.trim();
+    if (!/^\d+-\d+$/.test(priceValue)) {
+      event.preventDefault();
+      alert('Por favor, ingresa un rango de precios válido. Ejemplo: 500-1000');
+    }
+  });
+});
+
+</script>

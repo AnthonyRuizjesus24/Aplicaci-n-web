@@ -3,6 +3,7 @@
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
 import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
+import '../styles/about.css'
 const pageTitle = "Sobre Nosotros";
 ---
 
@@ -13,9 +14,79 @@ const pageTitle = "Sobre Nosotros";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <link rel="stylesheet" href="../styles/global.css">
   </head>
   <body>
     <Header />
+    <main>
+      <!-- Sección de Introducción -->
+      <section class="intro">
+        <h1>Sobre Nosotros</h1>
+        <p>Somos una empresa dedicada a ofrecer experiencias de viaje inolvidables. Con años de experiencia en la industria, nos enorgullecemos de proporcionar un servicio de alta calidad y atención personalizada a cada uno de nuestros clientes.</p>
+      </section>
+
+      <!-- Sección de Misión y Visión -->
+      <section class="mission-vision">
+        <div class="mission">
+          <h2>Nuestra Misión</h2>
+          <p>Nuestra misión es crear momentos inolvidables y experiencias únicas para nuestros clientes a través de servicios de viaje personalizados y de alta calidad.</p>
+        </div>
+        <div class="vision">
+          <h2>Nuestra Visión</h2>
+          <p>Ser líderes en la industria del turismo, reconocidos por nuestra innovación, calidad de servicio y compromiso con la sostenibilidad y la responsabilidad social.</p>
+        </div>
+      </section>
+
+      <!-- Sección de Valores -->
+      <section class="values">
+        <h2>Nuestros Valores</h2>
+        <ul>
+          <li><strong>Calidad:</strong> Nos esforzamos por ofrecer el mejor servicio y experiencias de viaje de alta calidad.</li>
+          <li><strong>Compromiso:</strong> Nos dedicamos a satisfacer las necesidades y expectativas de nuestros clientes.</li>
+          <li><strong>Sostenibilidad:</strong> Promovemos prácticas de turismo responsable y sostenible.</li>
+          <li><strong>Innovación:</strong> Estamos constantemente innovando para ofrecer las mejores soluciones de viaje.</li>
+        </ul>
+      </section>
+
+      <!-- Sección de Equipo -->
+      <section class="team">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="team-member">
+          <img src="/path/to/member1.jpg" alt="Miembro del Equipo 1">
+          <h3>Juan Pérez</h3>
+          <p>Director General</p>
+        </div>
+        <div class="team-member">
+          <img src="/path/to/member2.jpg" alt="Miembro del Equipo 2">
+          <h3>Maria García</h3>
+          <p>Gerente de Ventas</p>
+        </div>
+        <div class="team-member">
+          <img src="/path/to/member3.jpg" alt="Miembro del Equipo 3">
+          <h3>Carlos Rodríguez</h3>
+          <p>Coordinador de Viajes</p>
+        </div>
+      </section>
+
+      <!-- Sección de Historia -->
+      <section class="history">
+        <h2>Nuestra Historia</h2>
+        <p>Fundada en [Año], nuestra empresa ha crecido y evolucionado, ofreciendo una amplia gama de servicios de viaje y creando recuerdos inolvidables para nuestros clientes. Desde nuestros humildes comienzos, hemos mantenido nuestro compromiso con la excelencia y la satisfacción del cliente.</p>
+      </section>
+
+      <!-- Sección de Testimonios -->
+      <section class="testimonials">
+        <h2>Testimonios de Clientes</h2>
+        <div class="testimonial">
+          <p>"Tuve la mejor experiencia de viaje con esta empresa. Su atención al detalle y su dedicación a la satisfacción del cliente son inigualables."</p>
+          <p>- Ana López</p>
+        </div>
+        <div class="testimonial">
+          <p>"Recomiendo encarecidamente sus servicios. Mi familia y yo tuvimos unas vacaciones increíbles gracias a su equipo profesional y amable."</p>
+          <p>- Pedro Martínez</p>
+        </div>
+      </section>
+    </main>
     <Footer />
   </body>
 </html>

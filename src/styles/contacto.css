@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  h1, h2 {
+    color: #444;
+  }
+  
+  .contact {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-form label {
+    grid-column: span 2;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form button {
+    grid-column: span 2;
+    padding: 0.75rem;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #555;
+  }
+  
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+  
+  .map {
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .map iframe {
+      width: 100%;
+    }
+  }
+  

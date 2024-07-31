@@ -204,86 +204,60 @@ a:hover {
 }
 
 /* Filtros de Paquete */
+/* global.css */
 .package-filters {
-  background: transparent;
-  padding: 2rem;
-  margin: 2rem 0;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-.package-filters form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.package-filters h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.package-filters .form-group {
+  margin-bottom: 15px;
 }
 
 .package-filters label {
-  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-.package-filters select, .package-filters input {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.package-filters button {
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.package-filters button:hover {
-  background: #0056b3;
-}
-
-/* Ofertas Especiales */
-.special-offers {
-  padding: 2rem;
-  background: transparent;
-}
-
-.offer-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 300px;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.offer-card img {
+.package-filters select,
+.package-filters input[type="text"] {
   width: 100%;
-  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.offer-info {
-  padding: 1rem;
+.package-filters button[type="submit"] {
+  width: 100%;
+  background-color: #ff6347;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.offer-info h3 {
-  margin-top: 0;
+.package-filters button[type="submit"]:hover {
+  background-color: #ff4500;
 }
 
-.btn-more {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #28a745;
-  color: #fff;
-  border-radius: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-}
-
-.btn-more:hover {
-  background: #218838;
-}
 
 /* Testimonios y Reseñas */
 .testimonials {
