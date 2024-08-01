@@ -1,9 +1,10 @@
 ---
-// Puedes importar componentes si los tienes
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
-import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
-import '../styles/destinos.css'
+import '../styles/global.css';
+import '../styles/destinos.css';
+import Formulario from '../component/destinos/Formulario.astro'
+import Galeria from '../component/galeria-destino/Galeria.astro';
 const pageTitle = "Destinos";
 ---
 
@@ -17,16 +18,17 @@ const pageTitle = "Destinos";
   </head>
   <body>
     <Header />
-     <!-- Introducción -->
-     <section class="intro">
+    <!-- Introducción -->
+    <section class="intro">
       <h1>Descubre Nuestros Destinos</h1>
       <p>Explora una selección de los destinos más impresionantes que ofrecemos. Desde playas paradisíacas hasta montañas majestuosas, cada lugar está lleno de experiencias únicas esperando por ti.</p>
     </section>
+
     <!-- Destinos Destacados -->
-    <section class="featured-destinations">
+    <section class="featured-destinations fade-in">
       <h2>Destinos Destacados</h2>
       <div class="destination-card">
-        <img src="/path/to/destination1.jpg" alt="Destino 1" />
+        <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Destino 1" />
         <div class="destination-info">
           <h3>Playa del Carmen</h3>
           <p>Disfruta de las hermosas playas y la vibrante vida nocturna de Playa del Carmen.</p>
@@ -34,7 +36,7 @@ const pageTitle = "Destinos";
         </div>
       </div>
       <div class="destination-card">
-        <img src="/path/to/destination2.jpg" alt="Destino 2" />
+        <img src="/galeria-destinos/cañon.jpg" alt="Destino 2" />
         <div class="destination-info">
           <h3>Gran Cañón</h3>
           <p>Explora las impresionantes vistas del Gran Cañón y vive una aventura inolvidable.</p>
@@ -42,54 +44,10 @@ const pageTitle = "Destinos";
         </div>
       </div>
     </section>
-    <!-- Opiniones de Clientes -->
-    <section class="testimonials">
-      <h2>Opiniones de Nuestros Clientes</h2>
-      <div class="testimonial">
-        <p>"Las vacaciones en Playa del Carmen fueron maravillosas. La playa es hermosa y la gente es muy amigable. ¡Definitivamente volveré!"</p>
-        <p>- Laura G.</p>
-      </div>
-      <div class="testimonial">
-        <p>"El tour por el Gran Cañón fue una experiencia increíble. Las vistas son impresionantes y el servicio fue excelente."</p>
-        <p>- Juan M.</p>
-      </div>
-    </section>
+    <Galeria/>
 
-    <section class="destination-gallery">
-      <h2>Galería de Destinos</h2>
-      <div class="gallery">
-        <div class="destination">
-          <img src="/path/to/destination1.jpg" alt="Destino 1" />
-          <h3>Destino 1</h3>
-          <p>Una breve descripción del destino 1.</p>
-        </div>
-        <div class="destination">
-          <img src="/path/to/destination2.jpg" alt="Destino 2" />
-          <h3>Destino 2</h3>
-          <p>Una breve descripción del destino 2.</p>
-        </div>
-        <!-- Añadir más destinos aquí -->
-      </div>
-    </section>
-     
-     <!-- Formulario de Consulta -->
-     <section class="contact-form">
-      <h2>Solicita Más Información</h2>
-      <form action="/submit" method="post">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required />
-        
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required />
-        
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-     
-    
+  <Formulario/>
+
     <Footer />
   </body>
 </html>

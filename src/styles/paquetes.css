@@ -1,343 +1,226 @@
-/* Estilos generales para la sección de paquetes destacados */
-.featured-packages {
-    padding: 1rem; /* Reducir el padding para hacer el contenedor más compacto */
-    background-image: url('muralla-china.jpg'); /* Color de fondo claro para contraste */
-    text-align: center;
-    max-width: 1340px; /* Establecer un ancho máximo para el contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-  }
-  .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1rem; /* Tamaño del botón */
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .featured-packages h2 {
-    font-size: 2rem; /* Tamaño de fuente ajustado */
-    margin-bottom: 1rem; /* Espacio debajo del título */
-    color: #333; /* Color del texto */
-    font-weight: bold; /* Hacer el título más prominente */
-    text-transform: uppercase; /* Convertir el texto a mayúsculas */
-  }
-  
-  .packages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem; /* Reducir el espacio entre tarjetas */
-  }
-  .package:hover {
-    transform: translateY(-5px);
-  }
-  .package {
-    background-color: #fff; /* Fondo blanco para las tarjetas */
-    border-radius: 8px; /* Bordes más redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
-    overflow: hidden;
-    width: 250px; /* Reducir el ancho de las tarjetas */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
-    cursor: pointer;
-  }
-  
-  .package img {
-    width: 100%;
-    height: 100px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
-    border-bottom: 4px solid #007bff; /* Borde inferior para separación visual */
-  }
-  
-  .package h3 {
-    font-size: 1.5rem; /* Tamaño de fuente ligeramente menor */
-    margin: 0.5rem 0;
-    color: #444; /* Color de texto para el título del paquete */
-  }
-  
-  .package p {
-    padding: 0 0.5rem; /* Reducir el padding */
-    color: #666; /* Color del texto del párrafo */
-    line-height: 1.4; /* Espaciado entre líneas para mejor legibilidad */
-  }
-  
-  .btn-more {
-    display: inline-block;
-    padding: 0.5rem 1rem; /* Reducir el tamaño del botón */
-    margin: 0.75rem 0;
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border-radius: 4px; /* Bordes más redondeados */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.875rem; /* Tamaño de fuente del botón ajustado */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
-    
-  }
-  
-  .btn-more:hover {
-    background-color: #0056b3; /* Color de fondo del botón en hover */
-    transform: scale(1.03); /* Efecto de escala más sutil */
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .featured-packages h2 {
-      font-size: 2rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .featured-packages h2 {
-        font-size: 1.75rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
-    }
-  
-    .btn-more {
-        font-size: 0.75rem; /* Reducir el tamaño del texto del botón en pantallas pequeñas */
-    }
-  }
-  .package h3 {
-    font-size: 1.5rem;
-  }
-
-  .package p {
-    font-size: 0.875rem;
-  }
-
-  .btn-more {
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-
-  /*holaa*/
-  /* global.css */
-
-/* Estilos Generales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-
-h1, h2, h3 {
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-a:hover {
-  color: #0056b3;
-}
-
-/* Introducción a los Paquetes */
+/* Introducción de Paquetes */
 .intro-packages {
-  background: transparent;
-  padding: 2rem;
+  background: url('/images/intro-background.jpg') no-repeat center center/cover;
+  color: #fff;
   text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.intro-packages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Superposición oscura */
+  z-index: 0;
 }
 
 .intro-packages h1 {
-  margin-top: 0;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
 }
 
 .intro-packages p {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
 }
 
 /* Lista de Paquetes */
 .packages-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.packages-list h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .package-card {
-  background: transparent;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  max-width: 300px;
-  margin: 1rem;
-  transition: transform 0.3s ease;
+  margin: 1rem auto;
+  max-width: 600px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .package-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .package-card img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
 }
 
 .package-info {
-  padding: 1rem;
+  padding: 1.5rem;
+  text-align: left;
 }
 
 .package-info h3 {
-  margin-top: 0;
+  font-size: 1.9rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.package-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #666;
 }
 
 .btn-more {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
+  padding: 12px 24px;
+  font-size: 1.1rem;
   color: #fff;
-  border-radius: 4px;
-  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
   text-transform: uppercase;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-more:hover {
-  background: #0056b3;
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-more:active {
+  background-color: #004085;
+  transform: translateY(0);
 }
 
 /* Filtros de Paquete */
-/* global.css */
 .package-filters {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 20px auto;
+  background: #fff;
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 2rem auto;
 }
 
 .package-filters h2 {
-  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
+  text-align: center;
 }
 
-.package-filters .form-group {
-  margin-bottom: 15px;
-}
-
-.package-filters label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.package-filters select,
-.package-filters input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.package-filters button[type="submit"] {
-  width: 100%;
-  background-color: #ff6347;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.package-filters button[type="submit"]:hover {
-  background-color: #ff4500;
-}
-
-
-/* Testimonios y Reseñas */
-.testimonials {
-  background: #fff;
-  padding: 2rem;
-}
-
-.testimonial {
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-}
-
-.testimonial:last-child {
-  border-bottom: none;
-}
-
-.testimonial p {
-  margin: 0;
-}
-
-.testimonial p:last-child {
-  font-weight: bold;
-  text-align: right;
-}
-
-/* Formulario de Consulta */
-.contact-form {
-  background:transparent;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.contact-form h2 {
-  margin-top: 0;
-}
-
-.contact-form form {
+.package-filters form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact-form label {
-  font-weight: bold;
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-form input, .contact-form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-.contact-form button {
-  padding: 0.5rem 1rem;
-  background: #007bff;
+.form-group select,
+.form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
   color: #fff;
+  background-color: #007bff;
   border: none;
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-form button:hover {
-  background: #0056b3;
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-/* Responsivo */
+button:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+  .intro-packages {
+    padding: 4rem 1rem;
+  }
+
   .packages-list {
-    flex-direction: column;
-    align-items: center;
+    padding: 3rem 1rem;
   }
 
   .package-card {
     max-width: 100%;
   }
 
-  .package-filters form {
-    flex-direction: column;
+  .package-filters {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-packages h1 {
+    font-size: 2rem;
+  }
+
+  .intro-packages p {
+    font-size: 1rem;
+  }
+
+  .packages-list h2,
+  .package-filters h2 {
+    font-size: 2rem;
+  }
+
+  .package-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .package-info p {
+    font-size: 0.9rem;
   }
 }

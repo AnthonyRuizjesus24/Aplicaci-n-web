@@ -51,6 +51,8 @@ const pathname = new URL(Astro.request.url).pathname;
     padding: 1rem;
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure header stays in normal document flow */
+    z-index: 2; /* High z-index to ensure it stays above other content */
   }
 
   .logo img {
@@ -122,6 +124,7 @@ const pathname = new URL(Astro.request.url).pathname;
       left: 0;
       padding: 1rem;
       box-sizing: border-box;
+      z-index: 1;
     }
 
     .nav-links.expanded {

@@ -6,6 +6,7 @@ import Galeria from '../component/galeria-destino/Galeria.astro';
 import Paquetes from '../component/paquetes/Paquetes.astro';
 import Whatsapp from '../component/Whatsapp.astro';
 import Buscador from '../component/home/Bucador.astro'
+import Packages from './packages.astro';
 const pageTitle = "Inicio";
 ---
 
@@ -21,13 +22,17 @@ const pageTitle = "Inicio";
     <Header />
     <main>
       <section class="hero">
-        <h1>Descubre el Mundo con Nosotros</h1>
-        <p>Encuentra el paquete de viaje perfecto para tus próximas vacaciones.</p>
+        <div class="hero-content">
+          <h1>Descubre el Mundo con Nosotros</h1>
+          <p>Encuentra el paquete de viaje perfecto para tus próximas vacaciones.</p>
+          <a href="/offers" class="btn">Ver Ofertas</a>
       </section>
-      <Buscador/>
+      <Paquetes/>
+      <Galeria/>
       <Whatsapp />
     </main>
     <Footer />
+    
   </body>
 </html>
 <script>
