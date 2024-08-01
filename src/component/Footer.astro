@@ -14,15 +14,35 @@ import '../styles/footer.css'
 
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; <span id="current-year"></span> Max-Ruiz. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="https://es-la.facebook.com/" class="social-icon"><img src="/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/accounts/login/?next=%2F&source=desktop_nav&hl=es" class="social-icon"><img src="/instagran.svg" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/es/" class="social-icon"><img src="/tiktok.svg" alt="Tiktok"></a>
-        <!-- Añade más enlaces de redes sociales según sea necesario -->
+      <div class="footer-top">
+        <p>&copy; <span id="current-year"></span> Max-Ruiz. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://es-la.facebook.com/" class="social-icon" aria-label="Facebook">
+            <img src="/facebook.svg" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/accounts/login/?next=%2F&source=desktop_nav&hl=es" class="social-icon" aria-label="Instagram">
+            <img src="/instagran.svg" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/es/" class="social-icon" aria-label="TikTok">
+            <img src="/tiktok.svg" alt="TikTok">
+          </a>
+          <!-- Añade más enlaces de redes sociales según sea necesario -->
+        </div>
+        <div class="footer-links">
+          <a href="/privacy-policy">Política de Privacidad</a>
+          <a href="/terms-of-service">Términos de Servicio</a>
+          <a href="/contact">Contacto</a>
+        </div>
       </div>
     </div>
   </footer>
- 
+
+  <script>
+    // Script para el año actual en el pie de página
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  
 </body>
 </html>

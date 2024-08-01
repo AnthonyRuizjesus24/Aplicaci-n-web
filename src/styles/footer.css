@@ -1,53 +1,72 @@
+/* Estilos generales del pie de página */
 .footer {
-    background-color:transparent;
-    color: #000000;
-   
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #e0e0e0; /* Color del texto */
+  padding: 40px 20px; /* Espaciado generoso */
+  text-align: center; /* Centrar el texto */
+}
+
+.footer-content {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar el contenido */
+}
+
+.footer-top {
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-bottom .social-icons {
+  display: flex;
+  gap: 20px; /* Espaciado entre íconos */
+}
+
+.footer-bottom .social-icon img {
+  width: 30px; /* Tamaño de los íconos */
+  height: 30px;
+  transition: transform 0.3s, opacity 0.3s; /* Transición para efectos */
+}
+
+.footer-bottom .social-icon:hover img {
+  transform: scale(1.2); /* Efecto de agrandamiento */
+  opacity: 0.8; /* Cambiar la opacidad */
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f5a623; /* Cambiar color al pasar el ratón */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
   }
   
-  .footer-content {
+  .footer-bottom .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
     display: flex;
     flex-direction: column;
- 
-    
+    gap: 5px;
   }
-  
-  .footer p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1rem; /* Espacio entre los íconos */
-    margin-top: 1rem;
-  }
-  
-  .social-icon {
-    display: inline-block;
-    width: 50px; /* Tamaño de los íconos */
-    height: 50px; /* Tamaño de los íconos */
-  }
-  
-  .social-icon img {
-    width: 100%; /* Asegura que la imagen ocupe todo el espacio del contenedor */
-    height: 100%; /* Asegura que la imagen ocupe todo el espacio del contenedor */
-    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  
-  .social-icon:hover img {
-    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el cursor sobre él */
-    filter: brightness(0.8); /* Reduce el brillo al pasar el cursor sobre él */
-  }
-  
-  @media (max-width: 600px) {
-    .social-icon {
-      width: 24px; /* Tamaño reducido para pantallas más pequeñas */
-      height: 24px; /* Tamaño reducido para pantallas más pequeñas */
-    }
-  }
-  
+}

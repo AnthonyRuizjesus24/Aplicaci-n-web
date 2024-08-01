@@ -89,72 +89,82 @@ body {
   }
 }
 
-/* Featured Destinations */
+/* Destinos Destacados */
 .featured-destinations {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
   text-align: center;
-  padding: 3rem 1rem;
-  background-color: #f7f7f7;
 }
 
 .featured-destinations h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
-  animation: fadeIn 1.5s ease-out;
+  margin-bottom: 20px;
   color: #333;
 }
 
+.destination-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
 .destination-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
   overflow: hidden;
-  margin: 1rem 0;
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
 }
 
 .destination-card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .destination-card img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.destination-card:hover img {
+  filter: brightness(0.8);
 }
 
 .destination-info {
-  padding: 1.5rem;
-  animation: fadeIn 2s ease-out;
+  padding: 20px;
 }
 
 .destination-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #ff5722;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
 .destination-info p {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
+  color: #666;
+  margin-bottom: 15px;
 }
 
 .btn-more {
+  display: inline-block;
   padding: 10px 20px;
-  font-size: 0.9rem;
-  color: white;
-  background-color: #ff5722;
-  border: none;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
   border-radius: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-more:hover {
-  background-color: #e64a19;
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 /* Media queries para dispositivos móviles */

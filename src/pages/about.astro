@@ -1,9 +1,9 @@
 ---
-// Puedes importar componentes si los tienes
 import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
 import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
 import '../styles/about.css'
+import Whatsapp from '../component/Whatsapp.astro';
 const pageTitle = "Sobre Nosotros";
 ---
 
@@ -11,7 +11,7 @@ const pageTitle = "Sobre Nosotros";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <link rel="stylesheet" href="../styles/global.css">
@@ -41,10 +41,30 @@ const pageTitle = "Sobre Nosotros";
       <section class="values">
         <h2>Nuestros Valores</h2>
         <ul>
-          <li><strong>Calidad:</strong> Nos esforzamos por ofrecer el mejor servicio y experiencias de viaje de alta calidad.</li>
-          <li><strong>Compromiso:</strong> Nos dedicamos a satisfacer las necesidades y expectativas de nuestros clientes.</li>
-          <li><strong>Sostenibilidad:</strong> Promovemos prácticas de turismo responsable y sostenible.</li>
-          <li><strong>Innovación:</strong> Estamos constantemente innovando para ofrecer las mejores soluciones de viaje.</li>
+          <li>
+            <div class="value-icon">🛠️</div>
+            <div class="value-text">
+              <strong>Calidad:</strong> Nos esforzamos por ofrecer el mejor servicio y experiencias de viaje de alta calidad.
+            </div>
+          </li>
+          <li>
+            <div class="value-icon">🤝</div>
+            <div class="value-text">
+              <strong>Compromiso:</strong> Nos dedicamos a satisfacer las necesidades y expectativas de nuestros clientes.
+            </div>
+          </li>
+          <li>
+            <div class="value-icon">🌍</div>
+            <div class="value-text">
+              <strong>Sostenibilidad:</strong> Promovemos prácticas de turismo responsable y sostenible.
+            </div>
+          </li>
+          <li>
+            <div class="value-icon">💡</div>
+            <div class="value-text">
+              <strong>Innovación:</strong> Estamos constantemente innovando para ofrecer las mejores soluciones de viaje.
+            </div>
+          </li>
         </ul>
       </section>
 
@@ -52,17 +72,17 @@ const pageTitle = "Sobre Nosotros";
       <section class="team">
         <h2>Conoce a Nuestro Equipo</h2>
         <div class="team-member">
-          <img src="/path/to/member1.jpg" alt="Miembro del Equipo 1">
+          <img src="/Max.jpeg" alt="Miembro del Equipo 1">
           <h3>Juan Pérez</h3>
           <p>Director General</p>
         </div>
         <div class="team-member">
-          <img src="/path/to/member2.jpg" alt="Miembro del Equipo 2">
+          <img src="/Max.jpeg" alt="Miembro del Equipo 2">
           <h3>Maria García</h3>
           <p>Gerente de Ventas</p>
         </div>
         <div class="team-member">
-          <img src="/path/to/member3.jpg" alt="Miembro del Equipo 3">
+          <img src="/Max.jpeg" alt="Miembro del Equipo 3">
           <h3>Carlos Rodríguez</h3>
           <p>Coordinador de Viajes</p>
         </div>
@@ -88,5 +108,6 @@ const pageTitle = "Sobre Nosotros";
       </section>
     </main>
     <Footer />
+    <Whatsapp />
   </body>
 </html>

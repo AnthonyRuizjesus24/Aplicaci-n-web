@@ -5,18 +5,14 @@ import '../styles/global.css';
 import Galeria from '../component/galeria-destino/Galeria.astro';
 import Paquetes from '../component/paquetes/Paquetes.astro';
 import Whatsapp from '../component/Whatsapp.astro';
-import Buscador from '../component/home/Bucador.astro'
-import Packages from './packages.astro';
 const pageTitle = "Inicio";
 ---
-
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
@@ -26,26 +22,13 @@ const pageTitle = "Inicio";
           <h1>Descubre el Mundo con Nosotros</h1>
           <p>Encuentra el paquete de viaje perfecto para tus próximas vacaciones.</p>
           <a href="/offers" class="btn">Ver Ofertas</a>
+          <div> 
+          </div>
       </section>
       <Paquetes/>
-      <Galeria/>
-      <Whatsapp />
+      <Galeria/>   
     </main>
     <Footer />
-    
+    <Whatsapp />
   </body>
 </html>
-<script>
-  function searchDestinations() {
-    const searchInput = (document.getElementById('search-input') as HTMLInputElement).value;
-    alert(`Buscando destinos para: ${searchInput}`);
-    // Aquí puedes añadir la lógica para realizar la búsqueda.
-  }
-
-  function filterResults() {
-    const category = (document.getElementById('category') as HTMLSelectElement).value;
-    const duration = (document.getElementById('duration') as HTMLSelectElement).value;
-    alert(`Aplicando filtro:\nCategoría: ${category}\nDuración: ${duration}`);
-    // Aquí puedes añadir la lógica para filtrar los resultados.
-  }
-</script>

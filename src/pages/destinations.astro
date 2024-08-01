@@ -3,9 +3,10 @@ import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
 import '../styles/global.css';
 import '../styles/destinos.css';
-import Formulario from '../component/destinos/Formulario.astro'
-import Galeria from '../component/galeria-destino/Galeria.astro';
+import Whatsapp from '../component/Whatsapp.astro';
 const pageTitle = "Destinos";
+
+
 ---
 
 <html lang="es">
@@ -25,29 +26,44 @@ const pageTitle = "Destinos";
     </section>
 
     <!-- Destinos Destacados -->
-    <section class="featured-destinations fade-in">
-      <h2>Destinos Destacados</h2>
-      <div class="destination-card">
-        <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Destino 1" />
-        <div class="destination-info">
-          <h3>Playa del Carmen</h3>
-          <p>Disfruta de las hermosas playas y la vibrante vida nocturna de Playa del Carmen.</p>
-          <a href="/destination/playa-del-carmen" class="btn-more">Más Información</a>
-        </div>
+<section class="featured-destinations">
+  <h2>Destinos Destacados</h2>
+  <div class="destination-gallery">
+    <div class="destination-card">
+      <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Destino 1" />
+      <div class="destination-info">
+        <h3>Playa del Carmen</h3>
+        <p>Disfruta de las hermosas playas y la vibrante vida nocturna de Playa del Carmen.</p>
+        <a href="/destination/playa-del-carmen" class="btn-more">Más Información</a>
       </div>
-      <div class="destination-card">
-        <img src="/galeria-destinos/cañon.jpg" alt="Destino 2" />
-        <div class="destination-info">
-          <h3>Gran Cañón</h3>
-          <p>Explora las impresionantes vistas del Gran Cañón y vive una aventura inolvidable.</p>
-          <a href="/destination/gran-canon" class="btn-more">Más Información</a>
-        </div>
+    </div>
+    <div class="destination-card">
+      <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Destino 1" />
+      <div class="destination-info">
+        <h3>Playa del Carmen</h3>
+        <p>Disfruta de las hermosas playas y la vibrante vida nocturna de Playa del Carmen.</p>
+        <a href="/destination/playa-del-carmen" class="btn-more">Más Información</a>
       </div>
-    </section>
-    <Galeria/>
-
-  <Formulario/>
-
+    </div>
+    <div class="destination-card">
+      <img src="/galeria-destinos/cañon.jpg" alt="Destino 2" />
+      <div class="destination-info">
+        <h3>Gran Cañón</h3>
+        <p>Explora las impresionantes vistas del Gran Cañón y vive una aventura inolvidable.</p>
+        <a href="/destination/gran-canon" class="btn-more">Más Información</a>
+      </div>
+    </div>
+    <div class="destination-card">
+      <img src="/galeria-destinos/cañon.jpg" alt="Destino 2" />
+      <div class="destination-info">
+        <h3>Gran Cañón</h3>
+        <p>Explora las impresionantes vistas del Gran Cañón y vive una aventura inolvidable.</p>
+        <a href="/destination/gran-canon" class="btn-more">Más Información</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <Whatsapp />
     <Footer />
   </body>
 </html>

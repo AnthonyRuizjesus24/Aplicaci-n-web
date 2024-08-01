@@ -6,6 +6,7 @@ import '../styles/global.css'; // Asegúrate de tener tu archivo CSS
 import '../styles/paquetes.css'
 import GaleriaD from '../component/destinos/Formulario.astro';
 import Formulario from '../component/destinos/Formulario.astro';
+import Whatsapp from '../component/Whatsapp.astro';
 const pageTitle = "Paquetes";
 ---
 
@@ -30,7 +31,7 @@ const pageTitle = "Paquetes";
 <section class="packages-list">
   <h2>Paquetes Disponibles</h2>
   <div class="package-card">
-    <img src="/images/package1.jpg" alt="Paquete Aventura en la Selva" />
+    <img src="/selva.jpg" alt="Paquete Aventura en la Selva" />
     <div class="package-info">
       <h3>Paquete Aventura en la Selva</h3>
       <p>Embárcate en una emocionante aventura en la selva tropical con guías expertos.</p>
@@ -38,7 +39,7 @@ const pageTitle = "Paquetes";
     </div>
   </div>
   <div class="package-card">
-    <img src="/images/package2.jpg" alt="Escapada a la Playa" />
+    <img src="/playa.jpg" alt="Escapada a la Playa" />
     <div class="package-info">
       <h3>Escapada a la Playa</h3>
       <p>Disfruta de unas vacaciones relajantes en la playa con todo incluido.</p>
@@ -79,7 +80,7 @@ const pageTitle = "Paquetes";
 </section>
 
 
-
+<Whatsapp />
 
       <Formulario/>
     </main>

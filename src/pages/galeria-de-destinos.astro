@@ -3,61 +3,83 @@ import Header from '../component/Header.astro';
 import Footer from '../component/Footer.astro';
 import '../styles/global.css';
 import '../styles/galeria-destino.css';
+import Whatsapp from '../component/Whatsapp.astro';
 const pageTitle = "Galería de Destinos";
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
- </head>
-  <body>
-    <Header />
-    <main>
-      <!-- Sección de Introducción -->
-      <section class="intro-gallery">
-        <h1>Descubre Nuestros Destinos</h1>
-        <p>Explora los lugares más hermosos y emocionantes que ofrecemos. Desde playas paradisíacas hasta montañas impresionantes, tenemos destinos para todos los gustos.</p>
-      </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Destinos</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/galeria-destino.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  <Header />
+  <main>
+    <!-- Sección de Introducción -->
+    <section class="intro-gallery">
+      <h1>Descubre Nuestros Destinos</h1>
+      <p>Explora los lugares más hermosos y emocionantes que ofrecemos. Desde playas paradisíacas hasta montañas impresionantes, tenemos destinos para todos los gustos.</p>
+    </section>
 
-      <!-- Galería de Destinos -->
-      <section class="destinations-gallery">
-        <h2>Galería de Destinos Populares</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Playa del Carmen" />
-            <div class="gallery-item-info">
-              <h3>Playa del Carmen</h3>
-              <p>Un paraíso tropical con arenas blancas y aguas cristalinas.</p>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="/galeria-destinos/machu-picchu.jpg" alt="Machu Picchu" />
-            <div class="gallery-item-info">
-              <h3>Machu Picchu</h3>
-              <p>Explora la antigua ciudad inca en lo alto de los Andes.</p>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="/galeria-destinos/paris.jpg" alt="Paris" />
-            <div class="gallery-item-info">
-              <h3>Paris</h3>
-              <p>La ciudad del amor y las luces, perfecta para una escapada romántica.</p>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="/galeria-destinos/tokyo.jpg" alt="Tokyo" />
-            <div class="gallery-item-info">
-              <h3>Tokyo</h3>
-              <p>Una metrópolis vibrante con una mezcla única de tradición y modernidad.</p>
-            </div>
+    <!-- Galería de Destinos -->
+    <section class="destinations-gallery">
+      <h2>Galería de Destinos Populares</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Playa del Carmen" />
+          <div class="gallery-item-info">
+            <h3>Playa del Carmen</h3>
+            <p>Un paraíso tropical con arenas blancas y aguas cristalinas.</p>
           </div>
         </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
+        <div class="gallery-item">
+          <img src="/galeria-destinos/machu-picchu.jpg" alt="Machu Picchu" />
+          <div class="gallery-item-info">
+            <h3>Machu Picchu</h3>
+            <p>Explora la antigua ciudad inca en lo alto de los Andes.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/galeria-destinos/paris.jpg" alt="Paris" />
+          <div class="gallery-item-info">
+            <h3>Paris</h3>
+            <p>La ciudad del amor y las luces, perfecta para una escapada romántica.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/galeria-destinos/tokyo.jpg" alt="Tokyo" />
+          <div class="gallery-item-info">
+            <h3>Tokyo</h3>
+            <p>Una metrópolis vibrante con una mezcla única de tradición y modernidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials">
+      <h2>Opiniones de Nuestros Clientes</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-item">
+          <p>"Una experiencia increíble, los destinos superaron nuestras expectativas."</p>
+          <h4>- Ana López</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"¡Los paquetes turísticos están muy bien organizados y son de alta calidad!"</p>
+          <h4>- Carlos García</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"Recomiendo esta agencia para cualquier persona que quiera viajar con estilo."</p>
+          <h4>- Laura Martínez</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Whatsapp />
+  <Footer />
+</body>
 </html>
