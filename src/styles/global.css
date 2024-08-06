@@ -99,7 +99,7 @@ header {
   background-color: #ff5722;
   border: none;
   border-radius: 5px;
-  text-transform: uppercase;
+
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;

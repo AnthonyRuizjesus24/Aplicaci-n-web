@@ -1,0 +1,116 @@
+---
+import Header from '../component/Header.astro';
+import Footer from '../component/Footer.astro';
+import '../styles/global.css';
+import '../styles/informacion.css';
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+   
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Sección de Introducción -->
+      <section class="info-intro">
+        <h1>Información de Playa del Carmen</h1>
+        <p>Descubre todo lo que necesitas saber sobre nuestros destinos más populares. Aquí encontrarás información detallada, consejos de viaje y mucho más.</p>
+      </section>
+      
+      <div class="destination-detail">
+        <div class="destination-image-container">
+          <img src="/galeria-destinos/playa-del-carmen.jpg" alt="Imagen del destino" class="destination-image"/>
+        </div>
+        <div class="destination-text">
+          <h2>Playa del Carmen</h2>
+          <p>Playa del Carmen es un hermoso destino en la Riviera Maya, conocido por sus playas de arena blanca, aguas cristalinas y vibrante vida nocturna. Es el lugar perfecto para disfrutar de actividades acuáticas, explorar cenotes y experimentar la cultura local. Durante tu visita, no te pierdas la Quinta Avenida, llena de tiendas, restaurantes y entretenimiento.</p>
+        </div>
+        <!-- Sección de Clima -->
+        <div class="weather-section">
+          <h3>Clima Actual</h3>
+          <div class="weather-info">
+            <img id="weather-icon" class="weather-icon" alt="Icono del clima" />
+            <div class="weather-details">
+              <p id="weather-description">Cargando...</p>
+              <p id="temperature"></p>
+              <div class="additional-info">
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Sección de Actividades -->
+        <div class="activities-section">
+          <h3>Actividades Recomendadas</h3>
+          <ul>
+            <li>Visitar la Quinta Avenida</li>
+            <li>Buceo en los arrecifes de coral</li>
+            <li>Excursiones a los cenotes</li>
+            <li>Disfrutar de las playas de arena blanca</li>
+          </ul>
+        </div>
+
+        <!-- Sección de Consejos de Viaje -->
+        <div class="travel-tips-section">
+          <h3>Consejos de Viaje</h3>
+          <p>Para disfrutar al máximo tu visita a Playa del Carmen, te recomendamos llevar protector solar, repelente de insectos y ropa ligera. También es útil aprender algunas frases en español para comunicarte con los locales.</p>
+        </div>
+     
+    </main>
+    <Footer />
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const apiKey = 'a8e34c0c4b71d272d476310cc14b7638'; // Reemplaza con tu API key de OpenWeatherMap
+  const city = 'Playa del Carmen'; // Puedes cambiar la ciudad a la que prefieras
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error en la solicitud: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const weatherDescription = data.weather[0].description;
+      const temperature = data.main.temp;
+      const humidity = data.main.humidity;
+      const windSpeed = data.wind.speed;
+      const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+      // Asegúrate de que los elementos existen antes de intentar modificar sus propiedades
+      const weatherDescriptionElement = document.getElementById('weather-description') as HTMLParagraphElement;
+      const temperatureElement = document.getElementById('temperature') as HTMLParagraphElement;
+      const humidityElement = document.getElementById('humidity') as HTMLParagraphElement;
+      const windSpeedElement = document.getElementById('wind-speed') as HTMLParagraphElement;
+      const weatherIconElement = document.getElementById('weather-icon') as HTMLImageElement;
+
+      if (weatherDescriptionElement) {
+        weatherDescriptionElement.textContent = `Descripción: ${weatherDescription}`;
+      }
+      if (temperatureElement) {
+        temperatureElement.textContent = `Temperatura: ${temperature}°C`;
+      }
+      if (humidityElement) {
+        humidityElement.textContent = `Humedad: ${humidity}%`;
+      }
+      if (windSpeedElement) {
+        windSpeedElement.textContent = `Velocidad del viento: ${windSpeed} m/s`;
+      }
+      if (weatherIconElement) {
+        weatherIconElement.src = iconUrl;
+      }
+    })
+    .catch(error => console.error('Error al obtener los datos del clima:', error));
+});
+  </script>
+</html>

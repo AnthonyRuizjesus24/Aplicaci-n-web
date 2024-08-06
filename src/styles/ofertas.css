@@ -1,38 +1,60 @@
 /* Estilos generales para la página de ofertas */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* Sección de introducción */
 .intro {
-  padding: 60px 20px;
-  background: radial-gradient(circle, #ff7e5f 0%, #feb47b 100%);
-  color: white;
+  background: url('/galeria-destinos/cañon.jpg') no-repeat center center/cover;
+  color: #fff;
   text-align: center;
+  padding: 5rem 2rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .intro::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white(241, 239, 239, 0.4);
   z-index: 0;
 }
 
+.intro-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem; /* Añadir padding para móviles */
+}
+
 .intro h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  z-index: 1;
+  font-size: 2.9rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease-out;
+  color: white;
 }
 
 .intro p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  z-index: 1;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeIn 3s ease-out;
 }
 
+/* Sección de ofertas especiales */
 .special-offers {
   padding: 40px 20px;
   background-color: #f4f4f4;
@@ -126,4 +148,79 @@
 .btn-more:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
+}
+
+/* Consultas de medios para dispositivos móviles */
+@media (max-width: 768px) {
+  .intro {
+    padding: 3rem 1rem;
+  }
+
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .special-offers h2 {
+    font-size: 1.8rem;
+  }
+
+  .offer-card {
+    flex: 1 1 calc(100% - 20px); /* 1 card per row with spacing */
+    max-width: calc(100% - 20px);
+    margin: 10px 0;
+  }
+
+  .offer-card img {
+    height: 150px;
+  }
+
+  .offer-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .offer-info p {
+    font-size: 1rem;
+  }
+
+  .btn-more {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .special-offers h2 {
+    font-size: 1.6rem;
+  }
+
+  .offer-card img {
+    height: 120px;
+  }
+
+  .offer-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .offer-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn-more {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
